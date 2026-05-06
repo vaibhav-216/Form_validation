@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form action="submit.html" onsubmit=" return data()">
+        Name <input type="text" id="name"> <br><br>
+        Phone <input type="number" id="phone"> <br> <br>
+        Email <input type="text" id="email"> <br> <br>
+        password <input type="password" id="password"> <br><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+
+<script>
+    function data() {
+    let a = document.querySelector('#name').value;
+    let b = document.querySelector('#phone').value;
+    let c = document.querySelector('#email').value;
+    let d = document.querySelector('#password').value;
+
+    if (a =='' || b=='' || c=='' || d=='') {
+        alert('All fields are required!') 
+        return false;
+    }
+    else if(b.length<10 || b.length>10){
+        alert('Numbe should be 10 digits')
+    } 
+    } 
+  
+</script>
+</html>
